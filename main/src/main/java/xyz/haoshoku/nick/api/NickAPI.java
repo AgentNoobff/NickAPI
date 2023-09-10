@@ -45,6 +45,7 @@ public class NickAPI {
         User user = UserHandler.getUser( player.getUniqueId() );
         if ( user != null )
             user.setNickedName( minecraftName );
+            player.setDisplayName( minecraftName );
     }
 
     public static void setProfileName( Player player, String minecraftName ) {
@@ -102,6 +103,7 @@ public class NickAPI {
         User user = UserHandler.getUser( player.getUniqueId() );
         if ( user != null )
             user.setNickedName( user.getOriginalName() );
+            player.setDisplayName( user.getOriginalName() );
     }
 
     public static void resetSkin( Player player ) {
